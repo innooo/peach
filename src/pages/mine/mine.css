@@ -1,0 +1,9 @@
+.mine-main {
+  display: flex;
+}
+.mine-nav {
+  width: 138px;
+}
+.mine-content {
+  flex: 1;
+}

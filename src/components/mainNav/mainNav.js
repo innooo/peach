@@ -13,17 +13,17 @@ export default class MainNav extends Component {
             <NavLink
               to="/mine"
               className="mainNav"
-              activeClassName="activeNav"
+              activeClassName="mainNav-active"
             >我的</NavLink>
             <NavLink
               to="/project"
               className="mainNav"
-              activeClassName="activeNav"
+              activeClassName="mainNav-active"
             >项目</NavLink>
             <NavLink
               to="/service"
               className="mainNav"
-              activeClassName="activeNav"
+              activeClassName="mainNav-active"
             >服务</NavLink>
         </nav>
     )

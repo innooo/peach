@@ -1,0 +1,18 @@
+.subNav-wrap {
+  background: rgb(232, 232, 232);
+  width: 145px;
+}
+.subNav {
+  display: block;
+  height: 40px;
+  color: rgb(102, 102, 102);
+  font-size: 15px;
+  text-align: center;
+  line-height: 40px;
+}
+.subNav:not(.subNav-active):hover {
+  background: #F5F3F7;
+}
+.subNav-active {
+  background: #F2F3F7;
+}
