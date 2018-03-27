@@ -1,0 +1,17 @@
+.mainNav-wrap {
+  background: rgb(41, 53, 66);
+}
+.mainNav {
+  display:inline-block;
+  width: 70px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 13px;
+}
+/* 链接激活样式 */
+.activeNav {
+  background: #37cbc1;
+}
