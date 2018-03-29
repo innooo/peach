@@ -13,7 +13,14 @@ export default class Workitems extends Component {
           title="工作项"
           link="进入我的工作项"
         >
-          <WorkitemsTag />
+          <div
+            className="pending-item-wrap"
+          >
+            <WorkitemsTag tag="pending" className="pending-item" />
+            <WorkitemsTag tag="create" className="pending-item" />
+            <WorkitemsTag tag="follow" className="pending-item" />
+            <WorkitemsTag tag="collect" className="pending-item" />
+          </div>
         </WorktableCard>
       </div>
     );

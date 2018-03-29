@@ -1,0 +1,7 @@
+.pending-item-wrap {
+  display: flex;
+  justify-content: space-around;
+}
+.pending-item {
+  flex: 1;
+}

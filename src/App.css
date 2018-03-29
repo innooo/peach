@@ -9,6 +9,9 @@ a,h1,h2,h3,h4,h5,p,div,ul,ol,li,header,nav,section,aside,span,em,strong{
 html,body {
   font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif;
 }
+ul, ol, li {
+  list-style: none;
+}
 a {
   cursor: pointer;
   text-decoration: none;

@@ -1,0 +1,28 @@
+.wkt-wrap {
+  display: flex;
+  padding: 10px;
+  border: 1px solid #aeaeae;
+  border-radius: 3px;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 10px;
+}
+.wkt-left {
+  padding: 0 10px;
+}
+.wkt-left h1 {
+  text-align: center;
+  font-size: 30px;
+  font-family: impact;
+  margin-bottom: 10px;
+}
+.wkt-left p {
+  text-align: center;
+  font-size: 14px;
+}
+.wkt-right {
+  font-size: 12px;
+}
+.wkt-right li {
+  padding: 5px 0;
+}

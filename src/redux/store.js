@@ -2,11 +2,11 @@ import { createStore } from 'redux';
 import { combineReducers } from 'redux';
 
 // 引入reducers
-import testReducers1 from './reducers/testReducers1';
+import mine_worktable_workitems from './reducers/reducer_worktable_workitems';
 import testReducers2 from './reducers/testReducers2';
 
 const allReducers = {
-    test1: testReducers1,
+    mine_worktable_workitems: mine_worktable_workitems,
     test2: testReducers2
 };
 
