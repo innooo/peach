@@ -9,6 +9,7 @@
   font-size: 15px;
   text-align: center;
   line-height: 40px;
+  border-right: 1px solid #ccc;
 }
 .subNav:not(.subNav-active):hover {
   background: #F5F3F7;

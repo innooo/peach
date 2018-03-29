@@ -1,0 +1,26 @@
+.wkc-wrap {
+  padding: 10px;
+  background: #fff;
+  margin-bottom: 20px;
+}
+.wkc-title { 
+  margin-bottom: 10px;
+  position: relative;
+  z-index: 1;
+}
+.wkc-title h2 {
+  line-height: 1.5;
+  font-size: 16px;
+  font-weight: normal;
+}
+.wkc-title .wkc-title-link {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+  font-size: 12px;
+}
+.wkc-content {
+  min-height: 30px;
+}

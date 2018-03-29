@@ -1,0 +1,12 @@
+.wt-wrap {
+  display: flex;
+  background: #F2F3F7;
+}
+.wt-content {
+  flex: 1;
+  padding: 10px 15px;
+}
+.wt-side {
+  width: 350px;
+  padding: 10px 15px 10px 5px;
+}
