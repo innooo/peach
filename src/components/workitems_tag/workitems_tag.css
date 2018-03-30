@@ -8,6 +8,10 @@
   align-items: center;
   margin: 0 10px;
 }
+.wkt-wrap-active {
+  background: #fff;
+  border-color: #aeaeae;
+}
 .wkt-left {
   padding: 0 10px;
 }

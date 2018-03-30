@@ -3,11 +3,11 @@ import { combineReducers } from 'redux';
 
 // 引入reducers
 import mine_worktable_workitems from './reducers/reducer_worktable_workitems';
-import testReducers2 from './reducers/testReducers2';
+import mine_worktable_workitems_click from './reducers/reducer_worktable_workitems_click';
 
 const allReducers = {
     mine_worktable_workitems: mine_worktable_workitems,
-    test2: testReducers2
+    mine_worktable_workitems_click: mine_worktable_workitems_click,
 };
 
 const rootReducers = combineReducers(allReducers);
