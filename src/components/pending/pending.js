@@ -33,7 +33,6 @@ export default class Pending extends Component {
   componentDidMount() {
     const me = this;
     store.subscribe(() => {
-      console.log('pending', store.getState());
       let pendingCount = 0;
       let workitemsState = store.getState();
       for(let item in workitemsState.mine_worktable_workitems) {

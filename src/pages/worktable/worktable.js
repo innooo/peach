@@ -6,6 +6,7 @@ import Workitems from './../../components/workitems/workitems';
 
 export default class Worktable extends Component {
   render() {
+    const { props } = this;
     return (
       <div
         className="wt-wrap"
@@ -14,7 +15,7 @@ export default class Worktable extends Component {
           className="wt-content"
         >
           <Pending />
-          <Workitems />
+          <Workitems path={props.match.path} />
         </section>
         <aside
          className="wt-side"
