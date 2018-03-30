@@ -1,13 +1,10 @@
 .App {
   background: #fff;
+  height: 100%;
 }
 a,h1,h2,h3,h4,h5,p,div,ul,ol,li,header,nav,section,aside,span,em,strong{
   margin: 0;
   padding: 0;
-}
-/* 基础字体 */
-html,body {
-  font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif;
 }
 ul, ol, li {
   list-style: none;
@@ -15,4 +12,5 @@ ul, ol, li {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: #555;
 }

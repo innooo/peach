@@ -25,5 +25,9 @@
   font-size: 12px;
 }
 .wkt-right li {
-  padding: 5px 0;
+  margin: 10px 0;
+}
+.wkt-right li:hover {
+  text-decoration: underline;
+  color: #555;
 }

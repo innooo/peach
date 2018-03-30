@@ -3,7 +3,8 @@ import {
   BrowserRouter as Router,
   withRouter,
   Switch,
-  Route
+  Route,
+  NavLink
 } from 'react-router-dom';
 
 import './workitems.css';
@@ -11,15 +12,19 @@ import './workitems.css';
 import WorktableCard from './../worktable_card/worktable_card';
 import WorkitemsTag from './../workitems_tag/workitems_tag';
 
-const Test = () => {
-  console.log('aaaa')
+const Test = (props) => {
+  console.log(props.match.params);
   return <div>aaaaaa</div>
 }
 
 class Workitems extends Component {
-  workitemHandleClick(e) {
+  workitemHandleClick(e, tag) {
     e.stopPropagation();
-    this.props.history.push(this.props.match.path + '/pending');
+    e.nativeEvent.stopImmediatePropagation();
+    if(e.target.matches('div')) {
+      this.props.history.push(this.props.match.path + '/' + tag);
+    }
+    return true;
   }
   render() {
     const { props } = this;
@@ -35,26 +40,29 @@ class Workitems extends Component {
             <WorkitemsTag
               tag="pending"
               className="pending-item"
-              onClick={(e) => this.workitemHandleClick(e)}
+              onClick={(e) => this.workitemHandleClick(e, "pending")}
             />
             <WorkitemsTag
               tag="create"
               className="pending-item"
+              onClick={(e) => this.workitemHandleClick(e, "create")}
             />
             <WorkitemsTag
               tag="follow"
               className="pending-item"
+              onClick={(e) => this.workitemHandleClick(e, "follow")}
             />
             <WorkitemsTag
               tag="collect"
               className="pending-item"
+              onClick={(e) => this.workitemHandleClick(e, "collect")}
             />
           </div>
           <Switch>
-            <Route path={`${props.match.path}/pending`} component={Test} />
-            <Route path={`${props.match.path}/create`} component={Test} />
-            <Route path={`${props.match.path}/follow`} component={Test} />
-            <Route path={`${props.match.path}/collect`} component={Test} />
+            <Route path={`${props.match.path}/:tag`} component={Test} />
+            <Route path={`${props.match.path}/:tag`} component={Test} />
+            <Route path={`${props.match.path}/:tag`} component={Test} />
+            <Route path={`${props.match.path}/:tag`} component={Test} />
           </Switch>
         </WorktableCard>
       </div>
