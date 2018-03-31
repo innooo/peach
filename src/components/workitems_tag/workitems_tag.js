@@ -22,6 +22,7 @@ export default class Workitems_tag extends Component {
     return (
       <div
         className={"wkt-wrap " + props.className}
+        onClick={(e) => props.onClick && props.onClick(e)}
       >
         <div
           className="wkt-left"

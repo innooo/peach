@@ -4,4 +4,9 @@
 }
 .pending-item {
   flex: 1;
+  cursor: pointer;
+}
+.pending-item-now {
+  border: 1px solid #cecece;
+  background: #fff;
 }
