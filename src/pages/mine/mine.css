@@ -1,5 +1,6 @@
 .mine-main {
   display: flex;
+  height: 100%;
 }
 .mine-nav {
   width: 138px;

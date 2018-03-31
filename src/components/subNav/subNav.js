@@ -5,7 +5,7 @@ import {
 
 import './subNav.css';
 
-export default class Mine extends Component {
+export default class SubNav extends Component {
   render() {
     const props = this.props;
     return (

@@ -1,12 +1,16 @@
 .wkt-wrap {
   display: flex;
   padding: 10px;
-  border: 1px solid #aeaeae;
-  background: #efefef;
+  border: 1px solid #cecece;
+  background: #eaeaea;
   border-radius: 3px;
   justify-content: space-around;
   align-items: center;
   margin: 0 10px;
+}
+.wkt-wrap-active {
+  background: #fff;
+  border-color: #aeaeae;
 }
 .wkt-left {
   padding: 0 10px;
@@ -25,5 +29,9 @@
   font-size: 12px;
 }
 .wkt-right li {
-  padding: 5px 0;
+  margin: 10px 0;
+}
+.wkt-right li:hover {
+  text-decoration: underline;
+  color: #555;
 }

@@ -6,7 +6,7 @@
   flex: 1;
   cursor: pointer;
 }
-.pending-item-now {
-  border: 1px solid #cecece;
+.pending-item:hover {
+  border: 1px solid #aeaeae;
   background: #fff;
 }

@@ -1,16 +1,32 @@
 import React, { Component } from 'react';
-
+import {
+  BrowserRouter as Router,
+  withRouter,
+  Switch,
+  Route,
+  NavLink
+} from 'react-router-dom';
 import './workitems.css';
+
+import store from './../../redux/store';
+import action from './../../redux/actions/testAction1';
 
 import WorktableCard from './../worktable_card/worktable_card';
 import WorkitemsTag from './../workitems_tag/workitems_tag';
+import WorkitemsContent from './../workitems_content/workitems_content';
 
-export default class Workitems extends Component {
-  workitemHandleClick(e) {
-    e.target.classList.add('pending-item-now'); // 更改点击后活动的样式
-    console.log(e.target)
+class Workitems extends Component {
+  workitemHandleClick(e, tag) {
+    e.stopPropagation();
+    e.nativeEvent.stopImmediatePropagation();
+    if(e.target.getAttribute('data-mark') != 'link') {
+      this.props.history.push(this.props.match.path + '/' + tag);
+    }
+    store.dispatch(action('CLICK_WORKITEM_TAG',tag));
+    return true;
   }
   render() {
+    const { props } = this;
     return (
       <div className="pending-wrap">
         <WorktableCard
@@ -20,26 +36,41 @@ export default class Workitems extends Component {
           <div
             className="pending-item-wrap"
           >
-            <WorkitemsTag 
+            <WorkitemsTag
               tag="pending"
+              type="待处理"           
               className="pending-item"
-              onClick={(e) => this.workitemHandleClick(e)}
+              onClick={(e) => this.workitemHandleClick(e, "pending")}
             />
-            <WorkitemsTag 
-              tag="create" 
-              className="pending-item" 
+            <WorkitemsTag
+              tag="create"
+              type="我创建"
+              className="pending-item"
+              onClick={(e) => this.workitemHandleClick(e, "create")}
             />
-            <WorkitemsTag 
-              tag="follow" 
-              className="pending-item" 
+            <WorkitemsTag
+              tag="follow"
+              type="我跟踪"
+              className="pending-item"
+              onClick={(e) => this.workitemHandleClick(e, "follow")}
             />
-            <WorkitemsTag 
-              tag="collect" 
-              className="pending-item" 
+            <WorkitemsTag
+              tag="collect"
+              type="我收藏"
+              className="pending-item"
+              onClick={(e) => this.workitemHandleClick(e, "collect")}
             />
           </div>
+          <Switch>
+            <Route path={`${props.match.path}/:tag`} component={WorkitemsContent} />
+            <Route path={`${props.match.path}/:tag`} component={WorkitemsContent} />
+            <Route path={`${props.match.path}/:tag`} component={WorkitemsContent} />
+            <Route path={`${props.match.path}/:tag`} component={WorkitemsContent} />
+          </Switch>
         </WorktableCard>
       </div>
     );
   }
 }
+
+export default withRouter(Workitems);

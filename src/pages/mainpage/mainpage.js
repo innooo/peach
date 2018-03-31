@@ -14,7 +14,9 @@ export default class Homepage extends Component {
   render() {
     return (
     <Router>
-      <div>
+      <div
+        style={{height: '100%'}}
+      >
         <MainNav />
         <Route path="/mine" component={Mine}></Route>
         <Route path="/project" component={Project}></Route>

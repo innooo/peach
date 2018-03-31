@@ -1,6 +1,7 @@
 .subNav-wrap {
   background: rgb(232, 232, 232);
   width: 145px;
+  height: 100%;
 }
 .subNav {
   display: block;

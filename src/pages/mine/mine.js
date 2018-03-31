@@ -37,11 +37,11 @@ export default class Mine extends Component {
           >
             <Switch>
               <Route
-                path={`${props.match.path}/Worktable`}
+                path={`${props.match.path}/worktable`}
                 component={Worktable}
               ></Route>
               <Route
-                path={`${props.match.path}/Task`}
+                path={`${props.match.path}/task`}
                 component={Task}
               ></Route>
               <Route
